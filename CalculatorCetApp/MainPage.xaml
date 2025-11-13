@@ -39,7 +39,7 @@
        
        <Button x:Name="NumberButton0" Clicked="OnNumberPressed" Text="0" Grid.Row="5" Grid.Column="0"></Button>
        <Button x:Name="OperatorButtonEqual" Clicked="OnOperatorPressed" Text="=" Grid.Row="5" Grid.Column="1"></Button>
-       <Button x:Name="OperationButtonComma" Text="," Grid.Row="5" Grid.Column="2"></Button>
+       <Button x:Name="OperationButtonComma" Clicked="OnOperatorPressed" Text="," Grid.Row="5" Grid.Column="2"></Button>
        <Button x:Name="NumberOperatorButtonDivide" Clicked="OnOperatorPressed" Text="/" Grid.Row="5" Grid.Column="3"></Button>
        
        

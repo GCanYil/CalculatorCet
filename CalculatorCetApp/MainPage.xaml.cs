@@ -35,6 +35,21 @@ public partial class MainPage : ContentPage
     {
         Button pressedButton = sender as Button;
 
+        if (pressedButton.Text == ",")
+        {
+            if (Display.Text.Contains("."))
+            {
+                return;
+            }
+            else
+            {
+                Display.Text += ".";
+                isFirstNumberAfterOperator = false;
+                currentOperator = "";
+                return;
+            }
+        }
+        
         if (pressedButton.Text == "C")
         {
             if (Display.Text.Length > 1)
