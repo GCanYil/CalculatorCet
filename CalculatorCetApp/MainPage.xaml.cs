@@ -52,7 +52,7 @@ public partial class MainPage : ContentPage
         
         if (pressedButton.Text == "C")
         {
-            if (Display.Text.Length > 1)
+            if (Display.Text.Length >= 1)
             {
                 Display.Text = Display.Text.Remove(Display.Text.Length - 1);
                 currentOperator = "";
@@ -80,8 +80,8 @@ public partial class MainPage : ContentPage
         {
             var x = Double.Parse(Display.Text);
             var result = Math.Sqrt(x);
-            Display.Text = result.ToString();
-
+            Display.Text = result.ToString("F4");
+            History.Text = $"√{x}";
             firstNumber = result;
             currentOperator = "";
             isFirstNumberAfterOperator = true;
@@ -92,8 +92,8 @@ public partial class MainPage : ContentPage
         {
             var x = Double.Parse(Display.Text);
             var result = (x * x);
-            Display.Text = result.ToString();
-
+            Display.Text = result.ToString("F4");
+            History.Text = $"{x}^2";
             firstNumber = result;
             currentOperator = "";
             isFirstNumberAfterOperator = true;
@@ -127,7 +127,8 @@ public partial class MainPage : ContentPage
                 
             }
 
-            Display.Text = result.ToString();
+            Display.Text = result.ToString("F4");
+            History.Text = $"{firstNumber.ToString()} {currentOperator} {secondNumber.ToString()}";
             currentOperator = pressedButton.Text;
             if(pressedButton.Text == "=") currentOperator = "";
             firstNumber = result;
