@@ -18,7 +18,7 @@
        <Entry x:Name="Display" Grid.Row="0" Grid.Column="0" Keyboard="Numeric" Grid.ColumnSpan="4" ></Entry>
        
        <Button x:Name="C" Text="C" Grid.Row="1" Grid.Column="0"></Button>
-       <Button x:Name="AC" Text="AC" Grid.Row="1" Grid.Column="1"></Button>
+       <Button x:Name="AC" Clicked="OnOperatorPressed" Text="AC" Grid.Row="1" Grid.Column="1"></Button>
        <Button x:Name="NumberOperatorButtonSquare" Clicked="OnOperatorPressed" Text="^2" Grid.Row="1" Grid.Column="2"></Button>
        <Button x:Name="NumberOperatorButtonSqrt" Clicked="OnOperatorPressed" Text="√" Grid.Row="1" Grid.Column="3"></Button>
        

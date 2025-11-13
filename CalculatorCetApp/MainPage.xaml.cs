@@ -35,6 +35,17 @@ public partial class MainPage : ContentPage
     {
         Button pressedButton = sender as Button;
 
+        if (pressedButton.Text == "AC")
+        {
+            Display.Text = "";
+            firstNumber = 0;
+            secondNumber = 0;
+            currentOperator = "";
+            isFirstNumberAfterOperator = true;
+            return;
+
+        }
+        
         if (pressedButton.Text == "√")
         {
             var x = Double.Parse(Display.Text);
