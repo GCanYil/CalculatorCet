@@ -50,7 +50,7 @@ public partial class MainPage : ContentPage
             }
         }
         
-        if (pressedButton.Text == "C")
+        if (pressedButton.Text == "CE")
         {
             if (Display.Text.Length >= 1)
             {
@@ -65,7 +65,7 @@ public partial class MainPage : ContentPage
             }
         }
         
-        if (pressedButton.Text == "AC")
+        if (pressedButton.Text == "C")
         {
             Display.Text = "";
             firstNumber = 0;
